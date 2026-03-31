@@ -284,9 +284,9 @@ int main(){
         // We'll print all numbers separated by space and newline at end.
         for(size_t i=0;i<a.mem.size();++i){
             cout<<a.mem[i];
-            if(i+1<a.mem.size()) cout<<" ";
+            if((i+1)%4==0) cout<<" \n";
+            else if(i+1<a.mem.size()) cout<<" ";
         }
-        if(!a.mem.empty()) cout<<"\n";
     }catch(const exception& e){
         cerr << "ERR: " << e.what() << "\n";
         return 0;
